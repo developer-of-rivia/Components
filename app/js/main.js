@@ -138,4 +138,25 @@ $(document).ready(function () {
 		count = count > parseInt($input.data('max-count')) ? parseInt($input.data('max-count')) : count;
 		$input.val(parseInt(count));
 	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 });

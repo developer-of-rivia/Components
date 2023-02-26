@@ -53,6 +53,10 @@ gulp.task('serve', function (done) {
         browserSync.reload();
         done();
     });
+    gulp.watch("app/js/**/*.js").on('change', () => {
+      browserSync.reload();
+      done();
+  });
     gulp.watch("app/img/src/", gulp.series('images', 'webp', 'imagescopy'));
     gulp.watch("app/js/**/*.js", browserSync.reload());
     gulp.watch("app/img/svg-ui-icons/", gulp.series('svgsprite'));
