@@ -40,6 +40,37 @@
                         <h1>popup1</h1>
                         <h1>popup1</h1>
                         <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
+                        <h1>popup1</h1>
                     </div>
                 </div>
             </div>
@@ -49,7 +80,7 @@
 
 
     <style>
-        body{
+        a{
 			height: 200vh;
 		}
     </style>
@@ -68,6 +99,7 @@
 	<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
 	<!-- Базовые скрипты javascript -->
 	<!-- <script src="js/main.js"></script> -->
+	<script src="js/scroll-lock.min.js"></script>
 	<script src="js/hystmodal.min.js"></script>
 	<!-- endbuild -->
 
@@ -75,7 +107,20 @@
     <script>
         const myModal = new HystModal({
             linkAttributeName: "data-hystmodal",
+			backscroll: false,
         });
+
+		let $modalScroll = document.querySelector('body');
+		let a = document.querySelector('a');
+		let b = document.querySelector('.hystmodal__close');
+
+		a.addEventListener('click', function(){
+			scrollLock.disablePageScroll($modalScroll);
+		})
+		b.addEventListener('click', function(){
+			scrollLock.enablePageScroll($modalScroll);
+		})
+
     </script>
 
 </body>
