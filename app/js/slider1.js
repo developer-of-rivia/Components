@@ -8,8 +8,8 @@ $(document).ready(function () {
         centerMode: true,
         variableWidth: true,
         //appendArrows: $('.slider__nav'),
-        prevArrow: '<button class="slick-prev example__slider-prev" aria-label="Previous" type="button"><img src="img/arrow-left.png"></button>',
-        nextArrow: '<button class="slick-next example__slider-next" aria-label="Next" type="button"><img src="img/arrow-right.png"></button>',
+        prevArrow: '<div class="slick-prev example__slider-prev"><svg><use xlink:href="img/svg-ui-sprite.svg#left-ungle"></use></svg></div>',
+        nextArrow: '<div class="slick-next example__slider-prev"><svg><use xlink:href="img/svg-ui-sprite.svg#right-ungle"></use></svg></div>',
         responsive: [
             {
                 breakpoint: 1210,
