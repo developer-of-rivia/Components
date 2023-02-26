@@ -1,8 +1,11 @@
 @charset "UTF-8";
 /* reset */
-body, html {
+html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+}
+
+body {
+  overflow: hidden visible;
 }
 
 * {
