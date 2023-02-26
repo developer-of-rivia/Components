@@ -9,7 +9,6 @@
   z-index: 10;
   display: flex;
   align-items: center;
-  background: tomato;
 }
 
 .slick-arrow svg {
@@ -27,4 +26,9 @@
 
 .slick-next {
   right: -80px;
+}
+
+.slider__item {
+  width: 380px;
+  margin: 0 10px;
 }
