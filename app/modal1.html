@@ -28,9 +28,7 @@
     
     
     <a data-hystmodal="#myModal">Показать окно с id=myModal</a>
-
     <div class="hystmodal" id="myModal" aria-hidden="true">
-        <div class="hystmodal__overlay"></div>
         <div class="hystmodal__wrap">
             <div class="hystmodal__window" role="dialog" aria-modal="true">
                 <button data-hystclose class="hystmodal__close">XX</button>
@@ -69,9 +67,22 @@
 
     <style>
         body{
-                padding: 0;
-                margin: 0;
-            }
+            padding: 0;
+            margin: 0;
+        }
+        .hystmodal__opened body:before{
+            content: '';
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            background: black;
+            opacity: 0.5;
+            position: fixed;
+            z-index: 0;
+        }
+        .hystmodal__overlay{
+            margin: 0 !important;
+        }
 		@media screen and (max-width: 991px){
 			.hystmodal--active .hystmodal__window{
 				width: 95% !important;
@@ -79,7 +90,7 @@
             .hystmodal__overlay{
                 margin: 0 !important;
             }
-		}
+        }
     </style>
 
 
@@ -143,6 +154,7 @@
             linkAttributeName: "data-hystmodal",
 			backscroll: true,
         });
+        
 		// let scrollableElement = document.querySelectorAll('.hystmodal');
 		// let modalOpen = document.querySelectorAll('[data-hystmodal]');
 		// let modalClose = document.querySelectorAll('.hystmodal__close');
