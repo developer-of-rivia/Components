@@ -118,15 +118,15 @@
 			backscroll: false,
         });
 
-		let $modalScroll = document.querySelector('.hystmodal__window');
+		const $scrollableElement = document.querySelector('.hystmodal');
 		let a = document.querySelector('a');
 		let b = document.querySelector('.hystmodal__close');
 
 		a.addEventListener('click', function(){
-			scrollLock.disablePageScroll($modalScroll);
+			scrollLock.disablePageScroll($scrollableElement);
 		})
 		b.addEventListener('click', function(){
-			scrollLock.enablePageScroll($modalScroll);
+			scrollLock.enablePageScroll($scrollableElement);
 		})
 
     </script>
