@@ -18,7 +18,7 @@
 	<!-- Google Fonts roboto -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900|Rubik:500,700,900&subset=latin,cyrillic" rel="stylesheet">
 	<!-- Базовые стили CSS -->
-	<link rel="stylesheet" href="css/main.css">
+	<!-- <link rel="stylesheet" href="css/main.css"> -->
 	<link rel="stylesheet" href="css/hystmodal.min.css">
 	<!-- endbuild -->
 </head>
@@ -30,6 +30,7 @@
     <a data-hystmodal="#myModal">Показать окно с id=myModal</a>
 
     <div class="hystmodal" id="myModal" aria-hidden="true">
+        <div class="hystmodal__overlay"></div>
         <div class="hystmodal__wrap">
             <div class="hystmodal__window" role="dialog" aria-modal="true">
                 <button data-hystclose class="hystmodal__close">XX</button>
@@ -49,104 +50,57 @@
                         <h1>popup1</h1>
                         <h1>popup1</h1>
                         <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-
-    <a data-hystmodal="#myModal">Показать окно с id=myModal</a>
-
-    <div class="hystmodal" id="myModal" aria-hidden="true">
-        <div class="hystmodal__wrap">
-            <div class="hystmodal__window" role="dialog" aria-modal="true">
-                <button data-hystclose class="hystmodal__close">XX</button>
-                <div class="popup1">
-                    <div class="popup1__content">
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                        <h1>popup1</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
 
 
     <style>
-        a{
-			height: 200vh;
-		}
 		@media screen and (max-width: 991px){
-			.hystmodal:before{
-				margin-right: 0 !important;
-			}
 			.hystmodal--active .hystmodal__window{
 				width: 95% !important;
 			}
 		}
     </style>
+
+
+
+
+
+
+    <style>
+        .sec1{
+            background: tomato;
+            height: 400px;
+        }
+        .sec2{
+            background: aqua;
+            height: 400px;
+        }
+        .sec3{
+            background: rebeccapurple;
+            height: 400px;
+        }
+        .sec4{
+            background: olivedrab;
+            height: 400px;
+        }
+        .sec5{
+            background: royalblue;
+            height: 400px;
+        }
+    </style>
+    <section class="sec1"></section>
+    <section class="sec2"></section>
+    <section class="sec3"></section>
+    <section class="sec4"></section>
+    <section class="sec5"></section>
+
+
+
+
 
 
 
@@ -170,24 +124,24 @@
     <script>
         const myModal = new HystModal({
             linkAttributeName: "data-hystmodal",
-			backscroll: false,
+			backscroll: true,
         });
-		let scrollableElement = document.querySelectorAll('.hystmodal');
-		let modalOpen = document.querySelectorAll('[data-hystmodal]');
-		let modalClose = document.querySelectorAll('.hystmodal__close');
-        let modalBg = document.querySelectorAll('.hystmodal__wrap');
+		// let scrollableElement = document.querySelectorAll('.hystmodal');
+		// let modalOpen = document.querySelectorAll('[data-hystmodal]');
+		// let modalClose = document.querySelectorAll('.hystmodal__close');
+        // let modalBg = document.querySelectorAll('.hystmodal__wrap');
 
-        for(let i = 0; scrollableElement.length > i; i++){
-            modalOpen[i].addEventListener('click', function(){
-                scrollLock.disablePageScroll(scrollableElement[i]);
-            })
-            modalClose[i].addEventListener('click', function(){
-                scrollLock.enablePageScroll(scrollableElement[i]);
-            })
-            modalBg[i].addEventListener('click', function(){
-                scrollLock.enablePageScroll(scrollableElement[i]);
-            })
-        }
+        // for(let i = 0; scrollableElement.length > i; i++){
+        //     modalOpen[i].addEventListener('click', function(){
+        //         scrollLock.disablePageScroll(scrollableElement[i]);
+        //     })
+        //     modalClose[i].addEventListener('click', function(){
+        //         scrollLock.enablePageScroll(scrollableElement[i]);
+        //     })
+        //     modalBg[i].addEventListener('click', function(){
+        //         scrollLock.enablePageScroll(scrollableElement[i]);
+        //     })
+        // }
     </script>
 
 </body>
