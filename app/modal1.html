@@ -154,24 +154,18 @@
             linkAttributeName: "data-hystmodal",
 			backscroll: true,
         });
-        
-        
-		// let scrollableElement = document.querySelectorAll('.hystmodal');
-		// let modalOpen = document.querySelectorAll('[data-hystmodal]');
-		// let modalClose = document.querySelectorAll('.hystmodal__close');
-        // let modalBg = document.querySelectorAll('.hystmodal__wrap');
 
-        // for(let i = 0; scrollableElement.length > i; i++){
-        //     modalOpen[i].addEventListener('click', function(){
-        //         scrollLock.disablePageScroll(scrollableElement[i]);
-        //     })
-        //     modalClose[i].addEventListener('click', function(){
-        //         scrollLock.enablePageScroll(scrollableElement[i]);
-        //     })
-        //     modalBg[i].addEventListener('click', function(){
-        //         scrollLock.enablePageScroll(scrollableElement[i]);
-        //     })
-        // }
+
+
+
+        let $modalScroll = document.querySelector('.graph-modal');
+
+		a.addEventListener('click', function(){
+			scrollLock.disablePageScroll($modalScroll);
+		})
+		b.addEventListener('click', function(){
+			scrollLock.enablePageScroll($modalScroll);
+		})
     </script>
 
 </body>
