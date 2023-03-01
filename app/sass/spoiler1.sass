@@ -6,40 +6,38 @@
     border: 1px solid #888
 
 .accordion__icon
-    position: relative
-    display: inline-block
     width: 30px
     height: 30px
-    border-radius: 100%
-    background-color: #bfbfbf
+    position: relative
 
-.accordion__icon::before
-    content: ""
-    position: absolute
-    left: 50%
-    top: 50%
-    width: 50%
-    height: 1px
-    background-color: #000
-    transform: translate(-50%, -50%)
+    svg
+        transition: 0.2s ease
 
-.accordion__icon::after
-    content: ""
+.accordion__icon-close
+    opacity: 0
     position: absolute
-    left: 50%
-    top: 50%
-    width: 1px
-    height: 50%
-    background-color: #000
-    transform: translate(-50%, -50%)
+    left: 0
+    top: 0
+    width: inherit
+    height: inherit
+
+.accordion__icon-open
+    position: absolute
+    left: 0
+    top: 0
+    width: inherit
+    height: inherit
+
+.accordion.open
+    .accordion__icon-close
+        opacity: 1
+    .accordion__icon-open
+        opacity: 0
 
 .accordion__content
     padding: 20px
     border: 1px solid #888
     border-top: 1px solid transparent
-
-.accordion[open] .accordion__icon
-    transform: rotate(45deg)
 
 /**/
 .accordion__control
@@ -56,15 +54,8 @@
     transition: all 0.3s ease-out
     box-sizing: content-box
 
-.accordion__title
-    font-weight: bold
-    font-size: 1.17em
-
 .accordion__icon
     transition: transform 0.3s ease-out
-
-.open .accordion__icon
-    transform: rotate(45deg)
 
 .open .accordion__content
     opacity: 1
